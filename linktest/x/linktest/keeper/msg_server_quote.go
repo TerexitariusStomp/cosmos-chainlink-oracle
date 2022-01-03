@@ -9,7 +9,7 @@ import (
 	"github.com/lajosdeme/linktest/x/linktest/types"
 )
 
-func (k msgServer) CreateQuote(goCtx context.Context, msg *types.MsgCreateQuote) (*types.MsgCreateQuoteResponse, error) {
+func (k msgServer) CreateData(goCtx context.Context, msg *types.MsgCreateQuote) (*types.MsgCreateQuoteResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
 	id := k.AppendQuote(
@@ -25,7 +25,7 @@ func (k msgServer) CreateQuote(goCtx context.Context, msg *types.MsgCreateQuote)
 	}, nil
 }
 
-func (k msgServer) UpdateQuote(goCtx context.Context, msg *types.MsgUpdateQuote) (*types.MsgUpdateQuoteResponse, error) {
+func (k msgServer) UpdateData(goCtx context.Context, msg *types.MsgUpdateQuote) (*types.MsgUpdateQuoteResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
 	var quote = types.Quote{
@@ -51,7 +51,7 @@ func (k msgServer) UpdateQuote(goCtx context.Context, msg *types.MsgUpdateQuote)
 	return &types.MsgUpdateQuoteResponse{}, nil
 }
 
-func (k msgServer) DeleteQuote(goCtx context.Context, msg *types.MsgDeleteQuote) (*types.MsgDeleteQuoteResponse, error) {
+func (k msgServer) DeleteData(goCtx context.Context, msg *types.MsgDeleteQuote) (*types.MsgDeleteQuoteResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
 	if !k.HasQuote(ctx, msg.Id) {
@@ -66,6 +66,6 @@ func (k msgServer) DeleteQuote(goCtx context.Context, msg *types.MsgDeleteQuote)
 	return &types.MsgDeleteQuoteResponse{}, nil
 }
 
-func (k msgServer) RequestQuote(goCtx context.Context, msg *types.MsgRequestQuote) (*types.MsgRequestQuoteResponse, error) {
+func (k msgServer) RequestData(goCtx context.Context, msg *types.MsgRequestQuote) (*types.MsgRequestQuoteResponse, error) {
 	return &types.MsgRequestQuoteResponse{}, nil
 }

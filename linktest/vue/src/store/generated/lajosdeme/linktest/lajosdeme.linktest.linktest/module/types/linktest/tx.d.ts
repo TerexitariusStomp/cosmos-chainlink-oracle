@@ -91,18 +91,18 @@ export declare const MsgRequestQuoteResponse: {
 /** Msg defines the Msg service. */
 export interface Msg {
     /** this line is used by starport scaffolding # proto/tx/rpc */
-    CreateQuote(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse>;
-    UpdateQuote(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse>;
-    DeleteQuote(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse>;
-    RequestQuote(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse>;
+    CreateData(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse>;
+    UpdateData(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse>;
+    DeleteData(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse>;
+    RequestData(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse>;
 }
 export declare class MsgClientImpl implements Msg {
     private readonly rpc;
     constructor(rpc: Rpc);
-    CreateQuote(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse>;
-    UpdateQuote(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse>;
-    DeleteQuote(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse>;
-    RequestQuote(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse>;
+    CreateData(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse>;
+    UpdateData(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse>;
+    DeleteData(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse>;
+    RequestData(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse>;
 }
 interface Rpc {
     request(service: string, method: string, data: Uint8Array): Promise<Uint8Array>;

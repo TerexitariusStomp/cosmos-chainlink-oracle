@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 
-const {Reader, util, configure, Writer} = require("protobufjs/minimal")
+const { Reader, util, configure, Writer } = require("protobufjs/minimal")
 
 const Long = require('long')
 module.exports.protobufPackage = "lajosdeme.linktest.linktest"
@@ -31,7 +31,7 @@ const MsgCreateQuote = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgCreateQuote };
+        const message = {...baseMsgCreateQuote };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
@@ -55,29 +55,25 @@ const MsgCreateQuote = {
         return message;
     },
     fromJSON(object) {
-        const message = { ...baseMsgCreateQuote };
+        const message = {...baseMsgCreateQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = String(object.creator);
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.requester !== undefined && object.requester !== null) {
             message.requester = String(object.requester);
-        }
-        else {
+        } else {
             message.requester = "";
         }
         if (object.oracle !== undefined && object.oracle !== null) {
             message.oracle = String(object.oracle);
-        }
-        else {
+        } else {
             message.oracle = "";
         }
         if (object.text !== undefined && object.text !== null) {
             message.text = String(object.text);
-        }
-        else {
+        } else {
             message.text = "";
         }
         return message;
@@ -91,29 +87,25 @@ const MsgCreateQuote = {
         return obj;
     },
     fromPartial(object) {
-        const message = { ...baseMsgCreateQuote };
+        const message = {...baseMsgCreateQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = object.creator;
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.requester !== undefined && object.requester !== null) {
             message.requester = object.requester;
-        }
-        else {
+        } else {
             message.requester = "";
         }
         if (object.oracle !== undefined && object.oracle !== null) {
             message.oracle = object.oracle;
-        }
-        else {
+        } else {
             message.oracle = "";
         }
         if (object.text !== undefined && object.text !== null) {
             message.text = object.text;
-        }
-        else {
+        } else {
             message.text = "";
         }
         return message;
@@ -132,7 +124,7 @@ const MsgCreateQuoteResponse = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgCreateQuoteResponse };
+        const message = {...baseMsgCreateQuoteResponse };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
@@ -147,11 +139,10 @@ const MsgCreateQuoteResponse = {
         return message;
     },
     fromJSON(object) {
-        const message = { ...baseMsgCreateQuoteResponse };
+        const message = {...baseMsgCreateQuoteResponse };
         if (object.id !== undefined && object.id !== null) {
             message.id = Number(object.id);
-        }
-        else {
+        } else {
             message.id = 0;
         }
         return message;
@@ -162,11 +153,10 @@ const MsgCreateQuoteResponse = {
         return obj;
     },
     fromPartial(object) {
-        const message = { ...baseMsgCreateQuoteResponse };
+        const message = {...baseMsgCreateQuoteResponse };
         if (object.id !== undefined && object.id !== null) {
             message.id = object.id;
-        }
-        else {
+        } else {
             message.id = 0;
         }
         return message;
@@ -204,7 +194,7 @@ const MsgUpdateQuote = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgUpdateQuote };
+        const message = {...baseMsgUpdateQuote };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
@@ -231,35 +221,30 @@ const MsgUpdateQuote = {
         return message;
     },
     fromJSON(object) {
-        const message = { ...baseMsgUpdateQuote };
+        const message = {...baseMsgUpdateQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = String(object.creator);
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.id !== undefined && object.id !== null) {
             message.id = Number(object.id);
-        }
-        else {
+        } else {
             message.id = 0;
         }
         if (object.requester !== undefined && object.requester !== null) {
             message.requester = String(object.requester);
-        }
-        else {
+        } else {
             message.requester = "";
         }
         if (object.oracle !== undefined && object.oracle !== null) {
             message.oracle = String(object.oracle);
-        }
-        else {
+        } else {
             message.oracle = "";
         }
         if (object.text !== undefined && object.text !== null) {
             message.text = String(object.text);
-        }
-        else {
+        } else {
             message.text = "";
         }
         return message;
@@ -274,35 +259,30 @@ const MsgUpdateQuote = {
         return obj;
     },
     fromPartial(object) {
-        const message = { ...baseMsgUpdateQuote };
+        const message = {...baseMsgUpdateQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = object.creator;
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.id !== undefined && object.id !== null) {
             message.id = object.id;
-        }
-        else {
+        } else {
             message.id = 0;
         }
         if (object.requester !== undefined && object.requester !== null) {
             message.requester = object.requester;
-        }
-        else {
+        } else {
             message.requester = "";
         }
         if (object.oracle !== undefined && object.oracle !== null) {
             message.oracle = object.oracle;
-        }
-        else {
+        } else {
             message.oracle = "";
         }
         if (object.text !== undefined && object.text !== null) {
             message.text = object.text;
-        }
-        else {
+        } else {
             message.text = "";
         }
         return message;
@@ -319,19 +299,18 @@ const MsgUpdateQuoteResponse = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgUpdateQuoteResponse };
+        const message = {...baseMsgUpdateQuoteResponse };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+                default: reader.skipType(tag & 7);
+                break;
             }
         }
         return message;
     },
     fromJSON(_) {
-        const message = { ...baseMsgUpdateQuoteResponse };
+        const message = {...baseMsgUpdateQuoteResponse };
         return message;
     },
     toJSON(_) {
@@ -339,7 +318,7 @@ const MsgUpdateQuoteResponse = {
         return obj;
     },
     fromPartial(_) {
-        const message = { ...baseMsgUpdateQuoteResponse };
+        const message = {...baseMsgUpdateQuoteResponse };
         return message;
     },
 };
@@ -360,7 +339,7 @@ const MsgDeleteQuote = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgDeleteQuote };
+        const message = {...baseMsgDeleteQuote };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
@@ -378,17 +357,15 @@ const MsgDeleteQuote = {
         return message;
     },
     fromJSON(object) {
-        const message = { ...baseMsgDeleteQuote };
+        const message = {...baseMsgDeleteQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = String(object.creator);
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.id !== undefined && object.id !== null) {
             message.id = Number(object.id);
-        }
-        else {
+        } else {
             message.id = 0;
         }
         return message;
@@ -400,17 +377,15 @@ const MsgDeleteQuote = {
         return obj;
     },
     fromPartial(object) {
-        const message = { ...baseMsgDeleteQuote };
+        const message = {...baseMsgDeleteQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = object.creator;
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.id !== undefined && object.id !== null) {
             message.id = object.id;
-        }
-        else {
+        } else {
             message.id = 0;
         }
         return message;
@@ -427,19 +402,18 @@ const MsgDeleteQuoteResponse = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgDeleteQuoteResponse };
+        const message = {...baseMsgDeleteQuoteResponse };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+                default: reader.skipType(tag & 7);
+                break;
             }
         }
         return message;
     },
     fromJSON(_) {
-        const message = { ...baseMsgDeleteQuoteResponse };
+        const message = {...baseMsgDeleteQuoteResponse };
         return message;
     },
     toJSON(_) {
@@ -447,7 +421,7 @@ const MsgDeleteQuoteResponse = {
         return obj;
     },
     fromPartial(_) {
-        const message = { ...baseMsgDeleteQuoteResponse };
+        const message = {...baseMsgDeleteQuoteResponse };
         return message;
     },
 };
@@ -471,7 +445,7 @@ const MsgRequestQuote = {
     decode(input, length) {
         const reader = input instanceof Uint8Array ? new Reader(input) : input;
         let end = length === undefined ? reader.len : reader.pos + length;
-        const message = { ...baseMsgRequestQuote };
+        const message = {...baseMsgRequestQuote };
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
@@ -492,23 +466,20 @@ const MsgRequestQuote = {
         return message;
     },
     fromJSON(object) {
-        const message = { ...baseMsgRequestQuote };
+        const message = {...baseMsgRequestQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = String(object.creator);
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.requester !== undefined && object.requester !== null) {
             message.requester = String(object.requester);
-        }
-        else {
+        } else {
             message.requester = "";
         }
         if (object.oracle !== undefined && object.oracle !== null) {
             message.oracle = String(object.oracle);
-        }
-        else {
+        } else {
             message.oracle = "";
         }
         return message;
@@ -521,23 +492,20 @@ const MsgRequestQuote = {
         return obj;
     },
     fromPartial(object) {
-        const message = { ...baseMsgRequestQuote };
+        const message = {...baseMsgRequestQuote };
         if (object.creator !== undefined && object.creator !== null) {
             message.creator = object.creator;
-        }
-        else {
+        } else {
             message.creator = "";
         }
         if (object.requester !== undefined && object.requester !== null) {
             message.requester = object.requester;
-        }
-        else {
+        } else {
             message.requester = "";
         }
         if (object.oracle !== undefined && object.oracle !== null) {
             message.oracle = object.oracle;
-        }
-        else {
+        } else {
             message.oracle = "";
         }
         return message;
@@ -560,9 +528,8 @@ const MsgRequestQuoteResponse = {
         while (reader.pos < end) {
             const tag = reader.uint32();
             switch (tag >>> 3) {
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+                default: reader.skipType(tag & 7);
+                break;
             }
         }
         return message;
@@ -591,24 +558,24 @@ class MsgClientImpl {
     constructor(rpc) {
         this.rpc = rpc;
     }
-    CreateQuote(request) {
+    CreateData(request) {
         const data = MsgCreateQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "CreateQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "CreateData", data);
         return promise.then((data) => MsgCreateQuoteResponse.decode(new Reader(data)));
     }
-    UpdateQuote(request) {
+    UpdateData(request) {
         const data = MsgUpdateQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "UpdateQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "UpdateData", data);
         return promise.then((data) => MsgUpdateQuoteResponse.decode(new Reader(data)));
     }
-    DeleteQuote(request) {
+    DeleteData(request) {
         const data = MsgDeleteQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "DeleteQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "DeleteData", data);
         return promise.then((data) => MsgDeleteQuoteResponse.decode(new Reader(data)));
     }
-    RequestQuote(request) {
+    RequestData(request) {
         const data = MsgRequestQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "RequestQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "RequestData", data);
         return promise.then((data) => MsgRequestQuoteResponse.decode(new Reader(data)));
     }
 }
@@ -623,6 +590,7 @@ var globalThis = (() => {
         return global;
     throw "Unable to locate global object";
 })();
+
 function longToNumber(long) {
     if (long.gt(Number.MAX_SAFE_INTEGER)) {
         throw new globalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");

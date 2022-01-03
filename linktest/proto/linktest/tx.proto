@@ -8,10 +8,10 @@ option go_package = "github.com/lajosdeme/linktest/x/linktest/types";
 // Msg defines the Msg service.
 service Msg {
     // this line is used by starport scaffolding # proto/tx/rpc
-  rpc CreateQuote(MsgCreateQuote) returns (MsgCreateQuoteResponse);
-  rpc UpdateQuote(MsgUpdateQuote) returns (MsgUpdateQuoteResponse);
-  rpc DeleteQuote(MsgDeleteQuote) returns (MsgDeleteQuoteResponse);
-  rpc RequestQuote(MsgRequestQuote) returns (MsgRequestQuoteResponse);
+  rpc CreateData(MsgCreateQuote) returns (MsgCreateQuoteResponse);
+  rpc UpdateData(MsgUpdateQuote) returns (MsgUpdateQuoteResponse);
+  rpc DeleteData(MsgDeleteQuote) returns (MsgDeleteQuoteResponse);
+  rpc RequestData(MsgRequestQuote) returns (MsgRequestQuoteResponse);
 }
 
 // this line is used by starport scaffolding # proto/tx/message

@@ -13,7 +13,7 @@ import (
 
 func CmdCreateQuote() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "create-quote [requester] [oracle] [text]",
+		Use:   "create-data [requester] [oracle] [text]",
 		Short: "Creates a new quote",
 		Args:  cobra.ExactArgs(3),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -41,7 +41,7 @@ func CmdCreateQuote() *cobra.Command {
 
 func CmdUpdateQuote() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "update-quote [id] [requester] [oracle] [text]",
+		Use:   "update-data [id] [requester] [oracle] [text]",
 		Short: "Update a quote",
 		Args:  cobra.ExactArgs(4),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -74,7 +74,7 @@ func CmdUpdateQuote() *cobra.Command {
 
 func CmdDeleteQuote() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "delete-quote [id] [requester] [oracle] [text]",
+		Use:   "delete-data [id] [requester] [oracle] [text]",
 		Short: "Delete a quote by id",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -103,7 +103,7 @@ func CmdDeleteQuote() *cobra.Command {
 
 func CmdRequestQuote() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "request-quote [oracle]",
+		Use:   "request-data [oracle]",
 		Short: "Request a quote from an oracle.",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

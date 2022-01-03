@@ -1,6 +1,6 @@
 package types
 
 const (
-	QueryGetQuote  = "get-quote"
-	QueryListQuote = "list-quote"
+	QueryGetQuote  = "get-data"
+	QueryListQuote = "list-data"
 )
