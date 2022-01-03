@@ -9,10 +9,10 @@ import (
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
 	// this line is used by starport scaffolding # 2
-	cdc.RegisterConcrete(&MsgCreateQuote{}, "linktest/CreateQuote", nil)
-	cdc.RegisterConcrete(&MsgUpdateQuote{}, "linktest/UpdateQuote", nil)
-	cdc.RegisterConcrete(&MsgDeleteQuote{}, "linktest/DeleteQuote", nil)
-	cdc.RegisterConcrete(&MsgRequestQuote{}, "linktest/RequestQuote", nil)
+	cdc.RegisterConcrete(&MsgCreateQuote{}, "linktest/CreateData", nil)
+	cdc.RegisterConcrete(&MsgUpdateQuote{}, "linktest/UpdateData", nil)
+	cdc.RegisterConcrete(&MsgDeleteQuote{}, "linktest/DeleteData", nil)
+	cdc.RegisterConcrete(&MsgRequestQuote{}, "linktest/RequestData", nil)
 
 }
 

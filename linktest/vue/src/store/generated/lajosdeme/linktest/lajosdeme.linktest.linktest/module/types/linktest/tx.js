@@ -564,24 +564,24 @@ export class MsgClientImpl {
     constructor(rpc) {
         this.rpc = rpc;
     }
-    CreateQuote(request) {
+    CreateData(request) {
         const data = MsgCreateQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "CreateQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "CreateData", data);
         return promise.then((data) => MsgCreateQuoteResponse.decode(new Reader(data)));
     }
-    UpdateQuote(request) {
+    UpdateData(request) {
         const data = MsgUpdateQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "UpdateQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "UpdateData", data);
         return promise.then((data) => MsgUpdateQuoteResponse.decode(new Reader(data)));
     }
-    DeleteQuote(request) {
+    DeleteData(request) {
         const data = MsgDeleteQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "DeleteQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "DeleteData", data);
         return promise.then((data) => MsgDeleteQuoteResponse.decode(new Reader(data)));
     }
-    RequestQuote(request) {
+    RequestData(request) {
         const data = MsgRequestQuote.encode(request).finish();
-        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "RequestQuote", data);
+        const promise = this.rpc.request("lajosdeme.linktest.linktest.Msg", "RequestData", data);
         return promise.then((data) => MsgRequestQuoteResponse.decode(new Reader(data)));
     }
 }

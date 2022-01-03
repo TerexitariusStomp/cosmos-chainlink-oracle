@@ -21,7 +21,7 @@ func (msg *MsgCreateQuote) Route() string {
 }
 
 func (msg *MsgCreateQuote) Type() string {
-	return "CreateQuote"
+	return "CreateData"
 }
 
 func (msg *MsgCreateQuote) GetSigners() []sdk.AccAddress {
@@ -62,7 +62,7 @@ func (msg *MsgUpdateQuote) Route() string {
 }
 
 func (msg *MsgUpdateQuote) Type() string {
-	return "UpdateQuote"
+	return "UpdateData"
 }
 
 func (msg *MsgUpdateQuote) GetSigners() []sdk.AccAddress {
@@ -99,7 +99,7 @@ func (msg *MsgDeleteQuote) Route() string {
 }
 
 func (msg *MsgDeleteQuote) Type() string {
-	return "DeleteQuote"
+	return "DeleteData"
 }
 
 func (msg *MsgDeleteQuote) GetSigners() []sdk.AccAddress {
@@ -137,7 +137,7 @@ func (msg *MsgRequestQuote) Route() string {
 }
 
 func (msg *MsgRequestQuote) Type() string {
-	return "RequestQuote"
+	return "RequestData"
 }
 
 func (msg *MsgRequestQuote) GetSigners() []sdk.AccAddress {

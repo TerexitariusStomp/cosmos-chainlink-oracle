@@ -627,10 +627,10 @@ export const MsgRequestQuoteResponse = {
 /** Msg defines the Msg service. */
 export interface Msg {
   /** this line is used by starport scaffolding # proto/tx/rpc */
-  CreateQuote(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse>;
-  UpdateQuote(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse>;
-  DeleteQuote(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse>;
-  RequestQuote(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse>;
+  CreateData(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse>;
+  UpdateData(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse>;
+  DeleteData(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse>;
+  RequestData(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse>;
 }
 
 export class MsgClientImpl implements Msg {
@@ -638,11 +638,11 @@ export class MsgClientImpl implements Msg {
   constructor(rpc: Rpc) {
     this.rpc = rpc;
   }
-  CreateQuote(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse> {
+  CreateData(request: MsgCreateQuote): Promise<MsgCreateQuoteResponse> {
     const data = MsgCreateQuote.encode(request).finish();
     const promise = this.rpc.request(
       "lajosdeme.linktest.linktest.Msg",
-      "CreateQuote",
+      "CreateData",
       data
     );
     return promise.then((data) =>
@@ -650,11 +650,11 @@ export class MsgClientImpl implements Msg {
     );
   }
 
-  UpdateQuote(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse> {
+  UpdateData(request: MsgUpdateQuote): Promise<MsgUpdateQuoteResponse> {
     const data = MsgUpdateQuote.encode(request).finish();
     const promise = this.rpc.request(
       "lajosdeme.linktest.linktest.Msg",
-      "UpdateQuote",
+      "UpdateData",
       data
     );
     return promise.then((data) =>
@@ -662,11 +662,11 @@ export class MsgClientImpl implements Msg {
     );
   }
 
-  DeleteQuote(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse> {
+  DeleteData(request: MsgDeleteQuote): Promise<MsgDeleteQuoteResponse> {
     const data = MsgDeleteQuote.encode(request).finish();
     const promise = this.rpc.request(
       "lajosdeme.linktest.linktest.Msg",
-      "DeleteQuote",
+      "DeleteData",
       data
     );
     return promise.then((data) =>
@@ -674,11 +674,11 @@ export class MsgClientImpl implements Msg {
     );
   }
 
-  RequestQuote(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse> {
+  RequestData(request: MsgRequestQuote): Promise<MsgRequestQuoteResponse> {
     const data = MsgRequestQuote.encode(request).finish();
     const promise = this.rpc.request(
       "lajosdeme.linktest.linktest.Msg",
-      "RequestQuote",
+      "RequestData",
       data
     );
     return promise.then((data) =>

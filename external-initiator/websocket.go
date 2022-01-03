@@ -59,7 +59,7 @@ func (con wsConn) Subscribe(message string) {
 			var requesterAddr, event string
 			txRes.convert(&requesterAddr, &event)
 
-			if event == "RequestQuote" {
+			if event == "RequestData" {
 				fmt.Print("hereeeee.\n")
 				startJob(requesterAddr)
 			}

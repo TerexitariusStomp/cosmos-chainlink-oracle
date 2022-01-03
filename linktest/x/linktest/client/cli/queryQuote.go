@@ -12,7 +12,7 @@ import (
 
 func CmdListQuote() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "list-quote",
+		Use:   "list-data",
 		Short: "list all quote",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx := client.GetClientContextFromCmd(cmd)
@@ -44,7 +44,7 @@ func CmdListQuote() *cobra.Command {
 
 func CmdShowQuote() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "show-quote [id]",
+		Use:   "show-data [id]",
 		Short: "shows a quote",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

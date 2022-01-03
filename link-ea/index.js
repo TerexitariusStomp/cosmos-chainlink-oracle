@@ -30,7 +30,7 @@ const createRequest = (input, callback) => {
 
     const endpoint = validator.validated.data.endpoint || 'statistics'
 
-    const url = `https://shamba-gateway-staging-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
+    const url = `https://shamba-gateway-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
 
     console.log(validator.validated.data.data)
 

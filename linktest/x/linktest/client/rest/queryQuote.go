@@ -12,7 +12,7 @@ import (
 
 func listQuoteHandler(clientCtx client.Context) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		res, height, err := clientCtx.QueryWithData(fmt.Sprintf("custom/%s/list-quote", types.QuerierRoute), nil)
+		res, height, err := clientCtx.QueryWithData(fmt.Sprintf("custom/%s/list-data", types.QuerierRoute), nil)
 		if err != nil {
 			rest.WriteErrorResponse(w, http.StatusNotFound, err.Error())
 			return
@@ -27,7 +27,7 @@ func getQuoteHandler(clientCtx client.Context) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		id := mux.Vars(r)["id"]
 
-		res, height, err := clientCtx.QueryWithData(fmt.Sprintf("custom/%s/get-quote/%s", types.QuerierRoute, id), nil)
+		res, height, err := clientCtx.QueryWithData(fmt.Sprintf("custom/%s/get-data/%s", types.QuerierRoute, id), nil)
 		if err != nil {
 			rest.WriteErrorResponse(w, http.StatusNotFound, err.Error())
 			return

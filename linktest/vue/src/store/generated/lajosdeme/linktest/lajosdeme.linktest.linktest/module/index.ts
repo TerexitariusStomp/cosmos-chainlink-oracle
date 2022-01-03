@@ -4,17 +4,17 @@ import { StdFee } from "@cosmjs/launchpad";
 import { SigningStargateClient } from "@cosmjs/stargate";
 import { Registry, OfflineSigner, EncodeObject, DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgUpdateQuote } from "./types/linktest/tx";
-import { MsgRequestQuote } from "./types/linktest/tx";
-import { MsgDeleteQuote } from "./types/linktest/tx";
 import { MsgCreateQuote } from "./types/linktest/tx";
+import { MsgRequestQuote } from "./types/linktest/tx";
+import { MsgUpdateQuote } from "./types/linktest/tx";
+import { MsgDeleteQuote } from "./types/linktest/tx";
 
 
 const types = [
-  ["/lajosdeme.linktest.linktest.MsgUpdateQuote", MsgUpdateQuote],
-  ["/lajosdeme.linktest.linktest.MsgRequestQuote", MsgRequestQuote],
-  ["/lajosdeme.linktest.linktest.MsgDeleteQuote", MsgDeleteQuote],
   ["/lajosdeme.linktest.linktest.MsgCreateQuote", MsgCreateQuote],
+  ["/lajosdeme.linktest.linktest.MsgRequestQuote", MsgRequestQuote],
+  ["/lajosdeme.linktest.linktest.MsgUpdateQuote", MsgUpdateQuote],
+  ["/lajosdeme.linktest.linktest.MsgDeleteQuote", MsgDeleteQuote],
   
 ];
 export const MissingWalletError = new Error("wallet is required");
@@ -47,10 +47,10 @@ const txClient = async (wallet: OfflineSigner, { addr: addr }: TxClientOptions =
 
   return {
     signAndBroadcast: (msgs: EncodeObject[], { fee, memo }: SignAndBroadcastOptions = {fee: defaultFee, memo: ""}) => client.signAndBroadcast(address, msgs, fee,memo),
-    msgUpdateQuote: (data: MsgUpdateQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgUpdateQuote", value: MsgUpdateQuote.fromPartial( data ) }),
-    msgRequestQuote: (data: MsgRequestQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgRequestQuote", value: MsgRequestQuote.fromPartial( data ) }),
-    msgDeleteQuote: (data: MsgDeleteQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgDeleteQuote", value: MsgDeleteQuote.fromPartial( data ) }),
     msgCreateQuote: (data: MsgCreateQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgCreateQuote", value: MsgCreateQuote.fromPartial( data ) }),
+    msgRequestQuote: (data: MsgRequestQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgRequestQuote", value: MsgRequestQuote.fromPartial( data ) }),
+    msgUpdateQuote: (data: MsgUpdateQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgUpdateQuote", value: MsgUpdateQuote.fromPartial( data ) }),
+    msgDeleteQuote: (data: MsgDeleteQuote): EncodeObject => ({ typeUrl: "/lajosdeme.linktest.linktest.MsgDeleteQuote", value: MsgDeleteQuote.fromPartial( data ) }),
     
   };
 };
