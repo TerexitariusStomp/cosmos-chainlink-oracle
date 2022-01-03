@@ -27,7 +27,7 @@ This repository contains three subrepositories:
 All the geospatial datasets and analytics indicated on the Shamba Documentation (https://docs.shamba.app) can be accessed using the above setup.
 
 ## Live Demo
-We have a full implementation of the above setup which we provide access to for those who want to test it out. To get a link and credentials to try out a live demo of this project, join the Shamba Discord server and make a request of the same. (https://discord.com/invite/jwMysGu7g4) 
+We have a live demo of the above setup which we provide access to for those who want to test it out. To get a link and credentials to try out a live demo of this project, join the Shamba Discord server and make a request of the same. (https://discord.com/invite/jwMysGu7g4) 
 
 ## Attribution
 This project was inspired by a [Medium article](https://betterprogramming.pub/connect-a-chainlink-oracle-to-a-cosmos-blockchain-d7934d75bae5)
