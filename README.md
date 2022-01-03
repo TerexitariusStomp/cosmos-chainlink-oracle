@@ -12,6 +12,8 @@ When it logs a transaction that indicates that a user requested some data, it tr
 
 This external adapter requests the Shamba oracle to provide the required data, then creates a transaction with the data on the Cosmos blockchain. 
 
+The parameters in the user request can be changed to specify different datasets and analysis to the Shamba geospatial oracle.
+
 This setup can be used by any application specific blockchain on Cosmos that needs to consume geospatial data.
 
 
@@ -22,10 +24,10 @@ This repository contains three subrepositories:
 - [link-ea](https://github.com/lajosdeme/Chainlink-Cosmos/tree/main/link-ea): The Chainlink external adapter written in JavaScript.
 
 ## Available Data
-All the datasets indicated on the [Shamba Documentation] (https://docs.shamba.app) can be accessed using the above setup.
+All the geospatial datasets and analytics indicated on the Shamba Documentation (https://docs.shamba.app) can be accessed using the above setup.
 
 ## Live Demo
-To get a link and credentials to try out a live demo of this project, join the Shamba Discord server and make a request to access the demo. (https://discord.com/invite/jwMysGu7g4)
+We have a full implementation of the above setup which we provide access to for those who want to test it out. To get a link and credentials to try out a live demo of this project, join the Shamba Discord server and make a request of the same. (https://discord.com/invite/jwMysGu7g4) 
 
 ## Attribution
 This project was inspired by a [Medium article](https://betterprogramming.pub/connect-a-chainlink-oracle-to-a-cosmos-blockchain-d7934d75bae5)
