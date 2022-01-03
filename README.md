@@ -2,7 +2,7 @@
 This repo implements a connection between the Shamba [Chainlink](https://chain.link/) oracle serving geospatial data and an application specific [Cosmos](https://cosmos.network/) blockchain.
 
 ## How it works
-[Starport](https://cosmos.network/starport/) is used to set up an applicarion specific Cosmos blockchain that can store geospatial data from the Shamba Chainlink oracle.
+[Starport](https://cosmos.network/starport/) is used to set up an application specific Cosmos blockchain that can store geospatial data from the Shamba Chainlink oracle.
 
 A WebSocket client subscribes to transaction events coming from a [Tendermint node](https://tendermint.com/core/) in this Cosmos blockchain.
 
