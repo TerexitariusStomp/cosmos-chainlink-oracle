@@ -1,4 +1,4 @@
-# Chainlink-Cosmos
+# Shamba-Cosmos
 This project demonstrates how to connect the Shamba [Chainlink](https://chain.link/) oracle serving geospatial data to a [Cosmos](https://cosmos.network/) blockchain.
 
 ## How it works
