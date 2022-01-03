@@ -1,5 +1,5 @@
 # Shamba-Cosmos
-This project demonstrates how to connect the Shamba [Chainlink](https://chain.link/) oracle serving geospatial data to a [Cosmos](https://cosmos.network/) blockchain.
+This repo implements a connection between the Shamba [Chainlink](https://chain.link/) oracle serving geospatial data and an application specific [Cosmos](https://cosmos.network/) blockchain.
 
 ## How it works
 [Starport](https://cosmos.network/starport/) is used to set up a Cosmos blockchain that has the ability to store geospatial data from the Shamba Chainlink oracle.
